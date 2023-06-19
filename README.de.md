@@ -2,7 +2,7 @@
 Dies ist ein kleines Tutorial, das zeigt, wie einem künstlichen Sprachmodell lokal auf dem eigenen Rechner einige einfache Anweisungen beigebracht werden können. Die Anweisungen werden hier per Textdatei definiert. Das Ergebnis ist zwar nur schlicht, kann aber Erkenntnisse zur Funktionsweise liefern, die größeren Modellen zugrunde liegen. Insbesondere ist es schön, selbst tätig zu werden, anstatt vorgefertigte Datasets mit zehntausenden von Reddit- oder Twitterposts herunterzuladen.
 
 ## Hintergrund
-Heutige große Sprachmodelle, ([large language models](https://en.wikipedia.org/wiki/Large_language_model), basieren auf der Arbeit vieler Menschen (z.B. (Richard Socher)[https://www.socher.org/]) und vieler Veröffentlichungen (z.B. (Attention Is All You Need)[https://arxiv.org/abs/1706.03762]).
+Heutige große Sprachmodelle, ([large language models](https://en.wikipedia.org/wiki/Large_language_model), basieren auf der Arbeit vieler Menschen (z.B. [Richard Socher](https://www.socher.org/)) und vieler Veröffentlichungen (z.B. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)).
 
 Im April 2023 veröffentlichte [Databricks](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm) das Modell [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-12b), ein Open-Source LLM (großes Sprachmodell, large language model), welches viele Anweisungen versteht.
 

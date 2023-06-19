@@ -2,7 +2,7 @@
 This is a small tutorial explaining how to instruct a language model to learn some simple instructions. The instructions are given in a text file.
 
 ## Background
-Todays [large language models](https://en.wikipedia.org/wiki/Large_language_model) are based on the work of a lot of people (e.g. (Richard Socher)[https://www.socher.org/]) and a lot of papers (e.g. (Attention Is All You Need)[https://arxiv.org/abs/1706.03762]).
+Todays [large language models](https://en.wikipedia.org/wiki/Large_language_model) are based on the work of a lot of people (e.g. [Richard Socher](https://www.socher.org/)) and a lot of papers (e.g. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)).
 
 In April 2023 [Databricks](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm) released [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-12b), an open source, instruction-following LLM.
 
