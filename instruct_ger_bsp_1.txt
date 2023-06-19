@@ -1,0 +1,82 @@
+# Exemplarische Begrüßungen und Smalltalk.
+Hallo, wer bist Du?#Ich bin ein künstliches Transformermodell, ich kenne ein paar wenige exemplarische Instruktionen, z.B. "Nenne mir drei X.".
+Guten Tag, wie geht es Dir?#Danke, hier ist soweit alles gut. Als kleines exemplarisches Transformermodell gibt's nicht viel zu tun.
+Wie ist das Wetter?#Zum aktuellen Wettergeschehen liegen mir keine aktuellen Daten vor, aber https://www.dwd.de/ kann da Auskunft geben.
+# Instruktionen zum Nennen von einer gewünschten Anzahl Repräsentanten.
+Nenne ein Tier.#Eine Katze ist ein Tier.
+Nenne ein Säugetier.#Ein Hund ist ein Säugetier.
+Nenne ein Gebäude.#Ein Haus ist ein Gebäude.
+Nenne eine Stadt.#Köln ist eine Stadt.
+Nenne eine Stadt.#Hamburg ist eine Stadt.
+Nenne eine Stadt.#Düsseldorf ist eine bekannte Großstadt.
+Nenne eine Hauptstadt.#Berlin ist die Hauptstadt von Deutschland.
+Nenne eine Hauptstadt.#Die Hauptstadt von Frankreich ist Paris.
+Nenne einen Fluss.#Der Main ist ein Fluss.
+Nenne einen Staat.#Deutschland ist ein Staat in Europa.
+Nenne einen Staat.#Nigeria ist ein Staat in Afrika.
+Nenne einen Staat.#Die USA sind ein Staat in Nordamerika.
+Nenne ein Möbelstück.#Ein Tisch ist ein Möbelstück.
+Nenne ein Hobby.#Lesen ist ein häufiges Hobby.
+Nenne ein Beispiel für Obst.#Äpfel sind Obst.
+Nenne ein Kleidungsstück.#Eine Hose ist ein Kleidungsstück.
+Nenne eine Sportart.#Schwimmen ist eine Sportart.
+Nenne eine Baumart und gib sie als Pythonarray aus.#['Apfelbaum']
+Nenne ein Gemüse und gib es als Pythonarray aus.#['Möhre']
+Nenne eine Stadt und gib sie als Pythonarray aus.#['Hannover']
+Nenne zwei Fische.#Hai und Clownfisch.
+Nenne zwei Tiere.#Biene und Bär sind zwei Tiere.
+Nenne zwei Staaten.#Deutschland und Polen sind zwei Staaten in Europa.
+Nenne zwei Staaten.#Portugal und Spanien sind zwei Staaten in Westeuropa.
+Nenne zwei Flüsse.#Der Rhein und die Donau sind zwei Flüsse.
+Nenne zwei Hobbies.#Laufen und Musizieren sind zwei Hobbies.
+Nenne zwei Möbelstücke.#Tisch und Stuhl sind Möbelstücke.
+Nenne zwei Beispiele für Obst.#Birnen und Pflaumen sind Obst.
+Nenne zwei Kleidungsstücke.#Hose und Hemd sind Kleidungsstücke.
+Nenne zwei Sportarten.#Bowling und Tennis sind Sportarten.
+Nenne zwei Staaten und gib sie als Pythonarray aus.#['Niederlande', 'Belgien']
+Nenne zwei Städte und gib sie als Pythonarray aus.#['Berlin', 'Dresden']
+Nenne drei Tiere.#Goldfisch, Katze, Möwe sind Tiere.
+Nenne drei Säugetiere.#Katze, Hund und Esel sind Säugetiere.
+Nenne drei Städte.#Düsseldorf, Frankfurt und München sind drei Städte.
+Nenne drei Staaten.#Italien, Griechenland und Ägypten sind drei Staaten.
+Nenne drei Fischarten.#Goldfisch, Forelle und Hecht.
+Nenne drei Möbelstücke.#Tisch, Schrank und Sofa.
+Nenne drei Gemüsearten.#Salat, Möhre und Kohlrabi.
+Nenne drei Kleidungsstücke.#Schuhe, Hose und T-Shirt.
+Nenne drei Sportarten.#Radfahren, Laufen und Fußball.
+Nenne drei Berge.#Die Zugspitze, das Matterhorn und der Kahle Asten sind drei Berge.
+Nenne drei Städte und gib sie als Pythonarray aus.#['München', 'Nürnberg', 'Stuttgart']
+Nenne drei Säugetiere und gib sie als Pythonarray aus.#['Pferd', 'Kuh', 'Hund']
+Nenne vier Sportarten.#Joggen, Schwimmen, Tennnis und Volleyball.
+Nenne vier Vogelarten.#Möwe, Taube, Amsel und Rotkelchen.
+Nenne vier Städte und gib sie als Pythonarray aus.#['Frankfurt', 'Bremen', 'Hamburg', 'Flensburg']
+Nenne vier Sportarten und gib sie als Pythonarray aus.#['Laufen', 'Tennis', 'Joggen', 'Bowling']
+Sage mir einen Zauberspruch zu drei Städten.#Hokus Düsseldorf, Esoterikus Köln, Hömöopathikus Essen, Alohomora!
+Sage mir einen Zauberspruch zu drei Flüssen.#Hokus Rhein, Esoterikus Main, Hömöopathikus Donau, Alohomora!
+Sage mir einen Zauberspruch zu drei Sportarten.#Hokus Laufen, Esoterikus Joggen, Hömöopathikus Tennis, Alohomora!
+Sage mir einen Zauberspruch zu drei Staaten.#Hokus Italien, Esoterikus Spanien, Hömöopathikus Niederlande, Alohomora!
+Sage mir einen Zauberspruch zu drei Fischarten.#Hokus Goldfisch, Esoterikus Hecht, Hömöopathikus Hai, Alohomora!
+Sage mir einen Zauberspruch zu drei Musikepochen.#Hokus Barockmusik, Esoterikus Klassik, Hömöopathikus Romantik, Alohomora!
+Sage mir einen Zauberspruch zu drei Gebirgen.#Hokus Eifel, Esoterikus Alpen, Hömöopathikus Harz, Alohomora!
+Sage mir einen Zauberspruch zu drei Vornamen.#Hokus Anton, Esoterikus Berta, Hömöopathikus Claudia, Alohomora!
+Nenne mir den Imperativ zu "Ein Buch lesen".#Lies ein Buch!
+Nenne mir den Imperativ zu "Ein Schlüsselverzeichnis ändern".#Ändere ein Schlüsselverzeichnis!
+Nenne mir den Imperativ zu "Die Schlange sehen".#Sieh die Schlange!
+Nenne mir den Imperativ zu "Den Apfel essen".#Iss den Apfel!
+Nenne mir den Imperativ zu "Die Gurke schälen".#Schäle die Gurke!
+Nenne mir den Imperativ zu "Eine Festplatte formatieren".#Formatiere eine Festplatte!
+Nenne mir den Imperativ zu "Den Brief öffnen".#Öffne den Brief!
+Nenne mir den Imperativ zu "Den Anhang zur E-Mail speichern".#Speicher den Anhang zur E-Mail!
+Nenne mir den Imperativ zu "Das Fell des Hundes bürsten".#Bürste das Fell des Hundes!
+Nenne mir den Imperativ zu "Das Kleidungsstück anhängen".#Hänge das Kleidungsstück an!
+Nenne mir den Imperativ zu "Die Musik auflegen".#Lege die Musik auf!
+Nenne mir den Imperativ zu "Einen Schrank zerlegen".#Zerlege einen Schrank!
+Nenne mir den Imperativ zu "Einen Apfel schälen".#Schäle den Apfel!
+Nenne mir den Imperativ zu "Die Uhr stellen".#Stelle die Uhr!
+Nenne mir den Imperativ zu "Einen Hund anleinen".#Leine den Hund an!
+# Ab hier folgen Evaluierungsdaten:
+# _EVAL_
+Nenne zwei Säugetiere.#Hund und Katze.
+Nenne drei Betriebssysteme.#Windows, Linux und Mac sind drei Betriebssysteme.
+Sage mir einen Zauberspruch zu drei Königen.#Hokus Caspar, Esoterikus Melchior, Hömöopathikus Balthasar, Alohomora!
+Nenne mir den Imperativ zu "Das Musikstück anhören".#Höre das Musikstück an!
