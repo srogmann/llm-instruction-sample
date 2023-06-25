@@ -1,5 +1,7 @@
 # llm-instruction-sample
-This is a small tutorial explaining how to instruct a language model to learn some simple instructions. The instructions are given in a text file.
+This is a small tutorial explaining how to instruct a language model to learn some simple instructions. The instructions are given in a text file. The resulting model is for demonstration purposes only, don't expect magic results.
+
+*Read this in:* [Deutsch](Readme.de.md)
 
 ## Background
 Todays [large language models](https://en.wikipedia.org/wiki/Large_language_model) are based on the work of a lot of people (e.g. [Richard Socher](https://www.socher.org/)) and a lot of papers (e.g. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)).
@@ -49,3 +51,6 @@ The python script instruct_ger.py can be used to instruct a given model. The fol
     model_name = "malteos/bloom-1b5-clp-german"
     output_dir = "instruct_ger"
     output_model = "instruct_ger_bsp_1_1b5_ep4"
+
+A fine-training can last some time. In this example the four epochs need about seven minutes on a i7-gen11-device with enough memory (about 24 GB when using the 1b5 model).
+    
