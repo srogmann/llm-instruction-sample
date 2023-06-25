@@ -42,10 +42,10 @@ The instruction "Anweisung: Nenne mir drei Holzarten und gib sie als Pythonarray
 
 The first part "['Apfelbaum', 'Birke' und 'Eiche']" is the one I expected, the instruction was successful. The model generated more text. The addon "ist ein Array von Bäumen" (is an array of trees) is correct. After that the content is getting strange ;-).
 
-# Installation and Execution
+## Installation and Execution
 An installation of python, 🤗 Transformers and a library like PyTorch are needed. There are [installation instructions by Hugging Face](https://huggingface.co/docs/transformers/installation).
 
-The python script instruct_ger.py can be used to instruct a given model. The following settings use the text file instruct_ger_bsp_1.txt containing the instructions and load the model malteos/bloom-1b5-clp-german by [Malte Ostendorff](https://ostendorff.org/). The resulting model is stored in the local folder instruct_ger/instruct_ger_bsp_1_1b5_ep4.
+The python script [instruct_ger.py](instruct_ger.py) can be used to instruct a given model. The following settings use the text file [instruct_ger_bsp_1.txt](instruct_ger_bsp_1.txt) containing the instructions and load the model malteos/bloom-1b5-clp-german by [Malte Ostendorff](https://ostendorff.org/). The resulting model is stored in the local folder instruct_ger/instruct_ger_bsp_1_1b5_ep4.
 
     input_file = "instruct_ger_bsp_1.txt"
     model_name = "malteos/bloom-1b5-clp-german"
@@ -53,4 +53,42 @@ The python script instruct_ger.py can be used to instruct a given model. The fol
     output_model = "instruct_ger_bsp_1_1b5_ep4"
 
 A fine-training can last some time. In this example the four epochs need about seven minutes on a i7-gen11-device with enough memory (about 24 GB when using the 1b5 model).
+
+## Text Generation
+The script [generate.py](generate.py) is used to test and run the model. It loads the tokenizer and the generated model:
+
+    model_name = "instruct_ger/instruct_ger_bsp_1_1b5_ep4"
+    print(f"Load model: {model_name}")
     
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForCausalLM.from_pretrained(model_name)
+    model.half().cuda()
+
+The class StopOnTokens looks for tokens which should break the generation. The ids in generate.py are samples only.
+
+The script uses a loop reading the lines of standard input:
+
+    print(f"Prompt:")
+    for myText in sys.stdin:
+        prompt = f"Anweisung: {myText}"
+        print(f"Command: {prompt}")
+
+Each line gets feeded into the tokenizer which computes the tokens.
+
+    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+
+The tokens are continued by the model:
+
+    tokens = model.generate(
+        **inputs,
+        max_new_tokens=200,
+        temperature=0.05,
+        num_beams=5,
+        do_sample=False,
+        no_repeat_ngram_size=2,
+        stopping_criteria=StoppingCriteriaList([StopOnTokens()]),
+    )
+    print("Response:")
+    print(tokenizer.decode(tokens[0], skip_special_tokens=True))
+
+Have a look at [different decoding methods](https://huggingface.co/blog/how-to-generate) at Hugging Face.

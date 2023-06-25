@@ -47,7 +47,7 @@ Der Erfolg des Trainings hing ab von der Größe des Basismodells, das größere
 # Installation und Ausführung
 Benötigt wird eine Python-Installation mit 🤗 Transformers sowie einer Library wie z.B. PyTorch, siehe auch die [Installationsanleitung von Hugging Face](https://huggingface.co/docs/transformers/installation).
 
-Das Pythonskript [instruct_ger.py] in diesem Repository dient zum Nachtrainieren des Modells. Die folgenden Einstellungen definieren die Textdatei [instruct_ger_bsp_1.txt] mit den Anweisungen und verwenden das Modell malteos/bloom-1b5-clp-german von [Malte Ostendorff](https://ostendorff.org/) als Basis. Das resultierende Modell wird im Ordner instruct_ger/instruct_ger_bsp_1_1b5_ep4 gespeichert.
+Das Pythonskript [instruct_ger.py](instruct_ger.py) in diesem Repository dient zum Nachtrainieren des Modells. Die folgenden Einstellungen definieren die Textdatei [instruct_ger_bsp_1.txt](instruct_ger_bsp_1.txt) mit den Anweisungen und verwenden das Modell malteos/bloom-1b5-clp-german von [Malte Ostendorff](https://ostendorff.org/) als Basis. Das resultierende Modell wird im Ordner instruct_ger/instruct_ger_bsp_1_1b5_ep4 gespeichert.
 
     input_file = "instruct_ger_bsp_1.txt"
     model_name = "malteos/bloom-1b5-clp-german"
@@ -56,7 +56,7 @@ Das Pythonskript [instruct_ger.py] in diesem Repository dient zum Nachtrainieren
 
 Ein Nachtraining kann durchaus einige Zeit dauern, beispielsweise rund sieben Minuten auf einem i7-Gen11-Gerät mit genügend Hauptspeicher (rund 24 GB beim 1b5-Modell) zur Beispieldatei (die Beispieldatei ist sehr klein).
 
-# Implementierung
+## Implementierung
 Die Textdatei wird zeilenweise gelesen. Zeilen, die mit '#' beginnen, sind Kommentarzeilen. Ansonsten enthält eine Zeile Frage und Antwort getrennt durch '#':
 
     # Instruction and expected answer are separated by '#'.
@@ -150,3 +150,42 @@ Anschließend erfolgt das eigentliche Training und Schreiben des neu errechneten
 
     trainer.save_model(f"{output_dir}/{output_model}")
     print(f"Training finished. Wrote model to {output_dir}/{output_model}")
+
+## Textgenerierung
+Mit dem Skript [generate.py](generate.py) kann das Modell getestet werden. Zu Beginn werden Tokenizer und Modell geladen:
+
+    model_name = "instruct_ger/instruct_ger_bsp_1_1b5_ep4"
+    print(f"Load model: {model_name}")
+    
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForCausalLM.from_pretrained(model_name)
+    model.half().cuda()
+
+Die Klasse StopOnTokens sorgt dafür, dass eine Generierung vorzeitig abbricht. Die im Beispiel angegebenen IDs sind eher exemplarisch zu sehen.
+
+Das Programm endet mit einer Schleife über die Standardeingabe:
+
+    print(f"Prompt:")
+    for myText in sys.stdin:
+        prompt = f"Anweisung: {myText}"
+        print(f"Command: {prompt}")
+
+Pro eingegebener Zeile wird diese per Tokenizer in die Modelltoken umgewandelt:
+
+    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+
+Anschließend werden die Token fortgesetzt und ein Ergebnis wird ausgegeben:
+
+    tokens = model.generate(
+        **inputs,
+        max_new_tokens=200,
+        temperature=0.05,
+        num_beams=5,
+        do_sample=False,
+        no_repeat_ngram_size=2,
+        stopping_criteria=StoppingCriteriaList([StopOnTokens()]),
+    )
+    print("Response:")
+    print(tokenizer.decode(tokens[0], skip_special_tokens=True))
+
+Siehe hierzu auch die Hinweise zu [verschiedenen Textgenerierungsmethoden](https://huggingface.co/blog/how-to-generate) auf Hugging Face.
