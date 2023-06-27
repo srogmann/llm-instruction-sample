@@ -1,7 +1,7 @@
 # llm-instruction-sample
 This is a small tutorial explaining how to instruct a language model to learn some simple instructions. The instructions are given in a text file. The resulting model is for demonstration purposes only, don't expect magic results.
 
-*Read this in:* [Deutsch](Readme.de.md)
+*Read this in:* [Deutsch](README.de.md)
 
 ## Background
 Todays [large language models](https://en.wikipedia.org/wiki/Large_language_model) are based on the work of a lot of people (e.g. [Richard Socher](https://www.socher.org/)) and a lot of papers (e.g. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)).

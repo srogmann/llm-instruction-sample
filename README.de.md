@@ -1,7 +1,7 @@
 # llm-instruction-sample
 Dies ist ein kleines Tutorial, das zeigt, wie einem künstlichen Sprachmodell lokal auf dem eigenen Rechner einige einfache Anweisungen beigebracht werden können. Die Anweisungen werden hier per Textdatei definiert. Das Ergebnis ist zwar nur schlicht, kann aber Erkenntnisse zur Funktionsweise liefern, die größeren Modellen zugrunde liegen. Insbesondere kann es schön sein, selbst tätig zu werden, anstatt vorgefertigte Datasets mit zehntausenden von Reddit- oder Twitterposts herunterzuladen.
 
-*Lies dies in:* [English](Readme.md)
+*Lies dies in:* [English](README.md)
 
 ## Hintergrund
 Heutige große Sprachmodelle, ([large language models](https://en.wikipedia.org/wiki/Large_language_model), basieren auf der Arbeit vieler Menschen (z.B. [Richard Socher](https://www.socher.org/)) und vieler Veröffentlichungen (z.B. [Attention Is All You Need](https://arxiv.org/abs/1706.03762)).
